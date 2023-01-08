@@ -2,7 +2,6 @@ import subprocess
 import json
 from alive_progress import alive_bar
 from ffmpeg_progress_yield import FfmpegProgress
-from math import floor
 
 def ffprobe( file ) :
     ffprobe = subprocess.Popen([
