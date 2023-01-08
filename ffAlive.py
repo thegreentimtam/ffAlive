@@ -3,7 +3,7 @@ import json
 from alive_progress import alive_bar
 from ffmpeg_progress_yield import FfmpegProgress
 
-def ffprobe( file ) :
+def ffprobe( file: str ) :
     ffprobe = subprocess.Popen([
         'ffprobe',
         '-print_format', 'json',
@@ -16,7 +16,7 @@ def ffprobe( file ) :
     return json.loads( ffprobe )
 
 def ffGetTotal( input ):
-    metadata = ffprobe( input )
+    metadata = ffprobe( str(input) )
     if 'streams' in metadata:
         for stream in metadata['streams']:
             if( stream['codec_type'] and stream['codec_type'] == 'video' ):
