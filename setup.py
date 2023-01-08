@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ffAlive",
-    version="1.0.0",
+    version="1.0.1",
     author="Tim Green",
     author_email="the.green.timtam@gmail.com",
     description="FFMPEG with Progress Bars",
@@ -13,6 +13,6 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/pypa/packagename",
     packages=setuptools.find_packages(),
-    install_requires  = ['subprocess', 'json', 'alive_progress', 'ffmpeg_progress_yield' ],
+    install_requires  = ['alive_progress', 'ffmpeg_progress_yield'],
     license = 'MIT'
 )
