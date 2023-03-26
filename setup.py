@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ffAlive",
-    version="1.0.7",
+    version="1.0.8",
     author="Tim Green",
     author_email="the.green.timtam@gmail.com",
     description="FFMPEG with Progress Bars",
