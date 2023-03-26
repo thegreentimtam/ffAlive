@@ -19,7 +19,7 @@ def ffGetTotal( input ):
     metadata = ffprobe( str(input) )
     if 'streams' in metadata:
         for stream in metadata['streams']:
-            if( stream['codec_type'] and stream['codec_type'] == 'video' ):
+            if ( 'codec_type' in stream ) and ( stream['codec_type'] == 'video' ):
                 if 'nb_frames' in stream:
                     return int( stream['nb_frames'] )
     if 'format' in metadata:
